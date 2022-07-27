@@ -1,0 +1,95 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,500;0,700;1,400&display=swap');
+
+// STYLE FILES
+
+@import "_reset";
+@import "_header";
+@import "_action-navigation";
+@import "_action-info";
+@import "_action-links";
+@import "_footer";
+
+// VARIABLES
+
+$main-color: #4B4A45;
+$border-color: rgb(187, 180, 180);
+
+// MAIN STYLES
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 0 20px;
+    width: 100%;
+}
+
+.action {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template: 1fr / 225px 1fr 225px;
+}
+
+.input {
+    padding: 4px;
+    font-size: 16px;
+}
+
+.button {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+
+@media screen and (max-width: 1024px){
+    .action {
+        grid-template: 1fr / 185px 1fr 185px;
+    }
+    .input {
+        padding: 8px 2px;
+        max-width: 120px;
+    }
+    .button {
+        width: 24px;
+        height: 32px;
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .action {
+        grid-template: 185px 605px 1fr / 1fr;
+    }
+}
+@media screen and (max-width: 549px){
+    .action {
+        grid-template: 185px 855px 1fr / 1fr;
+    }
+}
